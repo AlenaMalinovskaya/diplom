@@ -1,4 +1,3 @@
-import pytest
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -11,7 +10,7 @@ from config import URL, correct_login, incorrect_password
 
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_argument("--start-maximized")
+options.add_argument("--window-size=1920,1080")
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 wait = WebDriverWait(driver, 10)
