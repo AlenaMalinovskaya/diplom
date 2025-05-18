@@ -8,15 +8,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import re
 
-# Опции браузера
+
 options = webdriver.ChromeOptions()
 options.add_argument(
-    "--disable-blink-features=AutomationControlled")  # Отключение автоматического определения бот-активности
-options.add_argument("--start-maximized")  # Запуск браузера в полноэкранном режиме
+    "--disable-blink-features=AutomationControlled")
+options.add_argument("--window-size=1920,1080")
 
-# Инициализация браузера
+
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 
@@ -24,11 +23,11 @@ def add_to_cart_test():
     driver.get("https://www.cd.cz/fanshop/")
 
     time.sleep(3)
-    # Согласие с куки
+
     try:
-        coockie_btn = WebDriverWait(driver, 10).until(
+        cookie_btn = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, "//a[@class='dm-cookie-popup-accept-cookies']")))
-        coockie_btn.click()
+        cookie_btn.click()
     except TimeoutException:
         print("Куки уже приняты или кнопка не найдена.")
         time.sleep(3)
@@ -64,8 +63,8 @@ def add_to_cart_test():
                 try:
                     time.sleep(1)
                     driver.execute_script("arguments[0].scrollIntoView({block: 'center'});",
-                                          add_to_card_button)  # Прокрутка
-                    driver.execute_script("arguments[0].click();", add_to_card_button)  # Фокусировка
+                                          add_to_card_button)
+                    driver.execute_script("arguments[0].click();", add_to_card_button)
                     time.sleep(3)
 
 

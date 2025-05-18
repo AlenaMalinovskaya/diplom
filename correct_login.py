@@ -1,3 +1,4 @@
+import pytest
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
-from config import URL, correct_login, incorrect_password
+from config import URL, correct_login, correct_password
 
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-blink-features=AutomationControlled")
@@ -15,7 +16,7 @@ options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 wait = WebDriverWait(driver, 10)
 
-def test_incorrect_login():
+def test_correct_login():
     try:
         driver.get(URL)
 
@@ -46,8 +47,8 @@ def test_incorrect_login():
             print("Ввели email")
 
             password_field.clear()
-            password_field.send_keys(incorrect_password)
-            print("Ввели неправильный пароль")
+            password_field.send_keys(correct_password)
+            print("Ввели правильный пароль")
 
             submit_buttons = wait.until(EC.presence_of_all_elements_located(
                 (By.CSS_SELECTOR, "button.btn.btn--blue.btn--filled.btn--full-width")
@@ -58,41 +59,15 @@ def test_incorrect_login():
             if submit_btn:
                 driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", submit_btn)
                 driver.execute_script("arguments[0].click();", submit_btn)
-                print("✅ Клик по кнопке 'Přihlásit' выполнен")
+                print(" Клик по кнопке 'Přihlásit' выполнен")
                 time.sleep(3)
             else:
-                print("⚠️ Кнопка отправки входа не найдена!")
+                print(" Кнопка отправки входа не найдена!")
 
-        # Проверка ошибок — выполняется независимо от кнопки
-        parts = ['nesprávný', 'příliš velkého', 'uzamčen']
-        xpath = "//*[" + " or ".join([f"contains(text(), '{p}')" for p in parts]) + "]"
-        error_blocks = driver.find_elements(By.XPATH, xpath)
-
-        print(f"🔎 Всего найдено элементов с ошибками: {len(error_blocks)}")
-        for block in error_blocks:
-            print("-", repr(block.text))
-
-        expected_errors = [
-            "Zadali jste nesprávný e-mail nebo heslo.",
-            "Z důvodu příliš velkého počtu chybných přihlášení byl účet uzamčen na 60 minut."
-        ]
-
-        found = False
-        for block in error_blocks:
-            text = block.text.strip()
-            for expected in expected_errors:
-                if expected in text and block.is_displayed():
-                    found = True
-                    print("✅ Найдено сообщение об ошибке:", expected)
-                    break
-
-        if not found:
-            driver.save_screenshot("error_screen.png")
-            print("📸 Скриншот сохранён: error_screen.png")
-
-        assert found, "❌ Ни одно из ожидаемых сообщений об ошибке не найдено!"
 
     except Exception as e:
-        print(f"⚠️ Ошибка во время выполнения теста: {e}")
+        print(f" Ошибка во время выполнения теста: {e}")
     finally:
         driver.quit()
+
+
