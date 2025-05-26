@@ -1,3 +1,44 @@
+# Diploma Project – CD.cz Website Testing
+
+This repository contains materials for the graduation thesis titled:
+
+**Functional and Load Testing of the CD.cz Railway Company Website**  
+Author: Alena Malinovskaya | Step IT Academy, 2025
+
+## 📄 Contents
+
+- Functional and load testing using:
+  - Selenium (Python)
+  - Postman (API validation)
+  - JMeter (Load testing)
+  - Lighthouse, SSL Labs, SecurityHeaders
+- Automated and manual test cases
+- UI/UX and content evaluation
+- Bug reports
+
+## 📁 Structure
+
+```
+/code         → Python scripts for automation
+/docs         → Thesis documents and presentation
+/test-cases   → Checklists, bug reports, plans
+```
+
+## 🛠 Tools Used
+
+Selenium • Postman • JMeter • Lighthouse • DevTools • BrowserStack • SSL Labs
+
+## 🔗 Links
+
+- [Thesis (DOCX)](docs/My_diplom_RU.pdf)
+- [Presentation (PPTX)](docs/presentation.pptx)
+
+---
+
+Feel free to explore and reuse the code and templates.
+
+---
+
 # Дипломный проект – Тестирование сайта CD.cz
 
 Данный репозиторий содержит материалы к дипломной работе:
