@@ -30,7 +30,7 @@ Selenium • Postman • JMeter • Lighthouse • DevTools • BrowserStack •
 
 ## 🔗 Ссылки
 
-- [Диплом (DOCX)](docs/diploma_ru.docx)
+- [Диплом (DOCX)](docs/My_diplom_EN.docx)
 - [Презентация (PPTX)](docs/presentation.pptx)
 
 ---
