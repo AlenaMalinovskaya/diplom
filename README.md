@@ -1,5 +1,10 @@
 # Diploma Project – CD.cz Website Testing
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Tested-brightgreen)
+![Made with Selenium](https://img.shields.io/badge/Made%20with-Selenium-43B02A?logo=selenium)
+
 This repository contains materials for the graduation thesis titled:
 
 **Functional and Load Testing of the CD.cz Railway Company Website**  
@@ -42,6 +47,11 @@ Feel free to explore and reuse the code and templates.
 
 # Дипломный проект – Тестирование сайта CD.cz
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Лицензия: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Статус](https://img.shields.io/badge/Статус-Тестировано-brightgreen)
+![Selenium](https://img.shields.io/badge/Работает%20через-Selenium-43B02A?logo=selenium)
+
 Данный репозиторий содержит материалы к дипломной работе:
 
 **Функциональное и нагрузочное тестирование сайта чешской железнодорожной компании CD.cz**  
@@ -72,8 +82,8 @@ Selenium • Postman • JMeter • Lighthouse • DevTools • BrowserStack •
 
 ## 🔗 Ссылки
 
-- [Диплом (на русском, PDF)](docs/My_diplom_RU.pdf)
-- [Диплом (на английском, PDF)](docs/My_diplom_EN.pdf)
+- [Диплом (на русском, PDF)](docs/My%20diplom%20RU.pdf)
+- [Диплом (на английском, PDF)](docs/My%20diplom%20EN%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.pdf)
 - [Презентация (PPTX)](docs/presentation.pptx)
 
 ---
