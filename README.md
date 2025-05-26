@@ -30,8 +30,8 @@ Selenium • Postman • JMeter • Lighthouse • DevTools • BrowserStack •
 
 ## 🔗 Links
 
-- [Thesis (RU DOCX)](docs/My_diplom_RU.docx)
-- [Thesis (EN DOCX)](docs/My_diplom_EN.docx)
+- [Thesis (RU PDF)](docs/My_diplom_RU.pdf)
+- [Thesis (EN PDF)](docs/My_diplom_EN.pdf)
 - [Presentation (PPTX)](docs/presentation.pptx)
 
 ---
@@ -72,8 +72,8 @@ Selenium • Postman • JMeter • Lighthouse • DevTools • BrowserStack •
 
 ## 🔗 Ссылки
 
-- [Диплом (на русском, DOCX)](docs/My_diplom_RU.docx)
-- [Диплом (на английском, DOCX)](docs/My_diplom_EN.docx)
+- [Диплом (на русском, PDF)](docs/My_diplom_RU.pdf)
+- [Диплом (на английском, PDF)](docs/My_diplom_EN.pdf)
 - [Презентация (PPTX)](docs/presentation.pptx)
 
 ---
