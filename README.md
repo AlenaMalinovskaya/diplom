@@ -31,7 +31,7 @@ Selenium • Postman • JMeter • Lighthouse • DevTools • BrowserStack •
 ## 🔗 Links
 
 - [Thesis (RU PDF)](docs/My_diplom_RU.pdf)
-- [Thesis (EN PDF)](docs/My_diplom_EN.pdf)
+- [Thesis (EN PDF)](docs/My%20diplom%20EN%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.pdf)
 - [Presentation (PPTX)](docs/presentation.pptx)
 
 ---
